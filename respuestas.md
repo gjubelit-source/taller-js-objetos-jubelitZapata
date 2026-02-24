@@ -76,42 +76,91 @@ Porque evita errores y comportamientos inesperados Validar significa comprobar q
 
 
 ¿Cómo se modifica una propiedad?
+Se modifica asignándole un nuevo valor usando el acceso por punto o por corchetes directamente sobre el objeto
 
-¿Qué diferencia hay entre modificar y copiar un objeto como harías la copia sin spread investiga?
+
+
+¿Qué diferencia hay entre modificar y copiar un objeto y cómo harías la copia sin usar spread?
+Modificar significa cambiar el objeto original, Copiar significa crear un nuevo objeto basado en el original sin cambiar  el primero.
+ Sin usar spread, se puede copiar utilizando métodos como Object.assign o creando manualmente un nuevo objeto y asignando sus propiedades
+
+
 
 ¿Qué es desestructuración?
+Es una técnica que permite extraer propiedades de un objeto y guardarlas en variables de forma directa
+
+
 
 ¿Qué ventaja tiene frente al acceso con punto?
+Hace el código más limpio, reduce repetición y deja claro qué propiedades se están utilizando
+
+
 
 ¿Qué pasa si el nombre de la variable no coincide con la propiedad?
+La variable quedará como undefined, a menos que se use renombramiento correctamente
+
 
 ¿Es obligatorio usar el mismo nombre?
+Sí es obligatorio si no se aplica renombramiento. Si se usa renombramiento, se puede asignar otro nombre a la variable.
+
 
 ¿Por qué se usan llaves dentro de llaves?
+Porque se extraen propiedades de un objeto que está dentro de otro objeto.
+
 
 ¿Qué significa el anidamiento en desestructuración?
+Significa acceder y extraer propiedades de objetos internos dentro de un objeto principal
+
 
 
 ¿Qué significa desestructurar en el parámetro?
-Significa extraer directamente las propiedades de un objeto dentro de los paréntesis de la función en vez de recibir el objeto completo y luego sacar los datos dentro
+Significa extraer directamente las propiedades del objeto en los parentesis de la función en lugar de recibir el objeto completo y luego acceder a sus propiedades dentro de la función
+
 
 
 ¿Qué ventaja tiene esta técnica?
+Hace la función más clara, más limpia y permite trabajar directamente con las propiedades necesarias
+
 
 ¿Por qué no necesitas usar punto dentro del return?
+Porque las propiedades ya fueron extraídas como variables independientes
 
 
 ¿Qué ocurre si el objeto no tiene esa propiedad?
+La variable tomará el valor undefined. Si se intenta acceder a una propiedad interna que no existe, puede generar un error
+
 
 ¿Qué es el renombramiento?
+Es cambiar el nombre de una propiedad al momento de desestructurarla para usarla con otro nombre como variable
+
 
 ¿Cuándo es útil cambiar el nombre de una variable?
+Cuando se quiere evitar conflictos de nombres, mejorar claridad o hacer el código más descriptivo
+
 
 ¿Qué hace el operador spread (...)?
+Copia las propiedades de un objeto dentro de otro objeto nuevo
+
 
 ¿La copia es profunda o superficial?
+La copia realizada con spread es superficial
+
 
 ¿Por qué se debe copiar también el objeto interno?
+Por que si no se copia el objeto interno, ambos objetos compartirán la misma referencia y cualquier cambioo afectará al original
 
 
 ¿Qué pasa si no lo haces?
+Si modificas el objeto interno en la copia sin haberlo copiado correctamente, también se modificará el objeto original.
+
+
+¿Qué tan recomendable es hacer desestructuración muy larga?
+No es muy recomendable si se vuelve difícil de leer
+
+
+¿Cuándo es mejor dividir la desestructuración?
+Cuando el objeto es muy grande o el código se ve complicado
+
+
+¿Qué errores comunes se pueden cometer?
+Usar una propiedad que no existe, equivocarse en el nombre o no revisar si el objeto está definido
