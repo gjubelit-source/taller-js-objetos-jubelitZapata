@@ -68,3 +68,126 @@ let estudiante={
      }
 }
 console.log(estudiante.notas.matematicas)
+
+
+
+// crear un objeto carro con marca modelo,  propietario (objeto con nombre y edad
+let carro={
+    marca:"mazda",
+    modelo:2025,
+
+    propietario:{
+        nombre:"Jube",
+        edad:20
+    }
+}
+console.log(carro.propietario.nombre)
+
+
+
+//Función (SIN DESESTRUCTURACIÓN) Crea una función que reciba el objeto carro y muestre marca y nombre del propietario usando punto.
+function ObjectCarro (carro){
+    return` la marca del carro es ${carro.marca} y el propietario es ${carro.propietario.nombre}`
+}
+console.log(ObjectCarro(carro));
+
+//cambia la edad del propietario
+carro.propietario.edad=30;
+console.log(carro.propietario.edad);
+
+
+//Desestructuracion del objeto persona:
+function objetoPersona({nombre,profesion}){
+console.log(`su nombre es ${nombre} y su profesion ${profesion}`)
+}
+objetoPersona(persona);
+
+
+//Desestructuracion del objeto carro:
+
+function ObjectCarro ({marca,modelo}){
+console.log(`la marca es ${marca} y el modelo ${modelo}`)
+}
+ObjectCarro(carro);
+
+
+
+//Desestructura el objeto propietario para obtener nombre y edad 
+function ObjectCarro ({nombre,edad}){
+console.log(`el propietario es ${nombre} y su edad es  ${edad}`)
+}
+ObjectCarro(carro.propietario);
+
+
+
+//crea una funcion que reciba un objeto desestructurado y muestre nombre y edad 
+
+function mostrarPersona({ nombre, edad }) {
+    console.log(`Nombre: ${nombre}`);
+    console.log(`Edad: ${edad}`);
+}
+mostrarPersona(persona);
+
+
+// Desestructuración en función
+function mostrarPropietario({ propietario: { nombre, edad } }) {
+    console.log(`Nombre: ${nombre}`);
+    console.log(`Edad: ${edad}`);
+}
+
+mostrarPropietario(carro);
+
+//renombramiento 
+function renombramiento({ propietario: { nombre: nombrePersona, edad: edadPersona } }) {
+    console.log(nombrePersona);
+    console.log(edadPersona);
+}
+
+renombramiento(carro);
+
+// Copia con spread
+
+let personaCopia = {
+    ...persona,
+    edad: 25
+};
+
+console.log(personaCopia);
+
+//Copiar objeto anidado
+let copiaCarro = {
+    ...carro,
+    propietario: {
+        ...carro.propietario,
+        edad: 40
+    }
+};
+
+console.log(copiaCarro.propietario.edad);
+console.log(carro.propietario.edad); 
+
+
+//
+let libro = {
+    titulo: "cien años de soledad ",
+    autor: {
+        nombre: "Gabriel garcia marquez",
+        edad:70
+    },
+    editorial: {
+        editorial: "Books",
+        año: 2025
+    }
+};
+//funcion destructuracion 
+function mostrarLibro({
+    titulo,
+    autor: { nombre, edad },
+    editorial: { editorial, año }
+}) {
+    console.log(
+        `El libro "${titulo}"  escrito por ${nombre} (${edad} años) y publicado por ${editorial} en el año ${año}.`
+    );
+}
+
+mostrarLibro(libro);

@@ -51,7 +51,7 @@ Con . el nombre de el objeto seguido de un puntp(.)y el nombre de una propiedad
 
 
 ¿Se puede modificar un objeto declarado con const? Explica.
-si se pude modificar const no deja cambiar el objeto completo,
+Si se pude modificar const no deja cambiar el objeto completo,
 pero sí deja cambiar lo que tiene dentro const protege la variable no lo que tiene dentro 
 
 
@@ -65,3 +65,53 @@ No tienes que cambiar todos los parámetros de la función
 
 ¿Cómo se accede a una propiedad dentro de otro objeto?
 se accede con el nombre de el objeto punto seguido del otro objeto punto la propiedad que queremos saber ej estudiante.notas.matematicas
+
+
+¿Qué ocurre si la propiedad no existe?
+Si intentas acceder a una propiedad que no existe JavaScript devuelve undefined
+
+
+¿Por qué es importante validar datos?
+Porque evita errores y comportamientos inesperados Validar significa comprobar que los datos existen y son correctos antes de usarlos.
+
+
+¿Cómo se modifica una propiedad?
+
+¿Qué diferencia hay entre modificar y copiar un objeto como harías la copia sin spread investiga?
+
+¿Qué es desestructuración?
+
+¿Qué ventaja tiene frente al acceso con punto?
+
+¿Qué pasa si el nombre de la variable no coincide con la propiedad?
+
+¿Es obligatorio usar el mismo nombre?
+
+¿Por qué se usan llaves dentro de llaves?
+
+¿Qué significa el anidamiento en desestructuración?
+
+
+¿Qué significa desestructurar en el parámetro?
+Significa extraer directamente las propiedades de un objeto dentro de los paréntesis de la función en vez de recibir el objeto completo y luego sacar los datos dentro
+
+
+¿Qué ventaja tiene esta técnica?
+
+¿Por qué no necesitas usar punto dentro del return?
+
+
+¿Qué ocurre si el objeto no tiene esa propiedad?
+
+¿Qué es el renombramiento?
+
+¿Cuándo es útil cambiar el nombre de una variable?
+
+¿Qué hace el operador spread (...)?
+
+¿La copia es profunda o superficial?
+
+¿Por qué se debe copiar también el objeto interno?
+
+
+¿Qué pasa si no lo haces?
